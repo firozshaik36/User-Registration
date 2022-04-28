@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
- * User Need To Enter Valid First Name For User Registration
+ * User Need To Enter Valid First Name and Last Name For User Registration
  *
  * @author firoz
  *
@@ -18,8 +18,9 @@ class Student{
 
     public static Logger logger = Logger.getLogger(Student.class);
 
-    //variable
+    //variables
     private String firstName;
+    private String lastName;
 
     //Created object for checkValid Class
     static  CheckValid checkValid = new CheckValid();
@@ -37,8 +38,21 @@ class Student{
             logger.info("Valid");
         }else
             logger.info("First Name Should Start With Capital Letter and has Minimum Three Characters");
+            System.out.println();
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        //if Condition for Checking Enterd firstName is Valid r Not
+        if (checkValid.validlastName(lastName)) {
+            this.lastName = lastName;
+            logger.info("Valid");
+        }else
+            logger.info("Last Name Should Start With Capital Letter and has Minimum Three Characters");
+    }
 }
 
 public class UserRegistration {
@@ -52,9 +66,12 @@ public class UserRegistration {
         System.out.println("Welcome To User Registration.");
         System.out.println();
 
-        // Taking Input From Uer
+        // Taking Input From User for FirstName and LastName
         Student student = new Student();
         System.out.println("Enter Your First Name:");
         student.setFirstName(sc.next());
+        System.out.println("Enter Your Last Name:");
+        student.setLastName(sc.next());
+        System.out.println();
     }
 }

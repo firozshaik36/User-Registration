@@ -4,8 +4,10 @@ import java.util.regex.Pattern;
 
 public class CheckValid {
 
-    public static final String NAME_PATTERN = "^[A-Z][a-z]{3,}$";
 
+    public static final String NAME_PATTERN = "^[A-Z][a-z]{3,}$"; //Name Pattern
+
+    //Methods
     public boolean validFirstName(String name){
         return Pattern.matches(NAME_PATTERN,name);
     }
