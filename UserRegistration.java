@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
- * User Need To Enter Valid First Name and Last Name For User Registration
+ * User Need To Enter Valid First Name , Last Name and Email For User Registration
  *
  * @author firoz
  *
@@ -21,18 +21,19 @@ class Student{
     //variables
     private String firstName;
     private String lastName;
+    private String email;
 
     //Created object for checkValid Class
     static  CheckValid checkValid = new CheckValid();
 
-    // Created Getters and Setters For Variable firstName
+    // Created Getters and Setters For Variables
     public String getFirstName() {
         return firstName;
     }
 
     public void setFirstName(String firstName) {
 
-        //if Condition for Checking Enterd firstName is Valid r Not
+        //if Condition for Checking Enterd firstName is Valid or Not
         if (checkValid.validFirstName(firstName)) {
             this.firstName = firstName;
             logger.info("Valid");
@@ -46,12 +47,26 @@ class Student{
     }
 
     public void setLastName(String lastName) {
-        //if Condition for Checking Enterd firstName is Valid r Not
-        if (checkValid.validlastName(lastName)) {
+        //if Condition for Checking Enterd LastName is Valid or Not
+        if (checkValid.validLastName(lastName)) {
             this.lastName = lastName;
             logger.info("Valid");
         }else
             logger.info("Last Name Should Start With Capital Letter and has Minimum Three Characters");
+        System.out.println();
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        //if Condition for Checking Enterd EMail is Valid or Not
+        if (checkValid.validEmail(email)) {
+            this.email = email;
+            logger.info("Valid");
+        }else
+            logger.info("Entered Email is an InValid");
     }
 }
 
@@ -72,6 +87,7 @@ public class UserRegistration {
         student.setFirstName(sc.next());
         System.out.println("Enter Your Last Name:");
         student.setLastName(sc.next());
-        System.out.println();
+        System.out.println("Enter Your Email");
+        student.setEmail(sc.next());
     }
 }
