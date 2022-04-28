@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
- * User Need To Enter Valid First Name , Last Name and Email For User Registration
+ * User Need To Enter Valid First Name , Last Name , Email and Mobile NUmber For User Registration
  *
  * @author firoz
  *
@@ -22,6 +22,7 @@ class Student{
     private String firstName;
     private String lastName;
     private String email;
+    private String mobileNumber;
 
     //Created object for checkValid Class
     static  CheckValid checkValid = new CheckValid();
@@ -67,6 +68,20 @@ class Student{
             logger.info("Valid");
         }else
             logger.info("Entered Email is an InValid");
+            System.out.println();
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        //if Condition for Checking Enterd MobileNumber is Valid or Not
+        if (checkValid.validMobileNumber(mobileNumber)) {
+            this.mobileNumber = mobileNumber;
+            logger.info("Valid");
+        }else
+            logger.info("Entered Mobile Number is an InValid");
     }
 }
 
@@ -89,5 +104,7 @@ public class UserRegistration {
         student.setLastName(sc.next());
         System.out.println("Enter Your Email");
         student.setEmail(sc.next());
+        System.out.println("Enter Your Mobile Number");
+        student.setMobileNumber(sc.nextLine());
     }
 }
