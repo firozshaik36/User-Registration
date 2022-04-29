@@ -8,12 +8,14 @@ public class CheckValid {
     public static final String NAME_PATTERN = "^[A-Z][a-z]{3,}$"; //Name Pattern
     public static final String EMAIL_PATTERN = "^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$";
     public static final String NUMBER_PATTERN = "^[0-9]{2}[\\s][0-9][0-9]{9}$"; //Number Pattern
-    public static final String PASSWORD_PATTERN = "^[A-Z]{1}[a-z]{8,}[0-9]{1}$";//PassWord Pattern
+    public static final String PASSWORD_PATTERN = "^[A-Z]{1}[a-z]{8,}[0-9]{1}[- @ + *]{1}$";//PassWord Pattern
 
     // Password Rules
     // Rule1- "^[a-z]{8,}$" ( Min 8 Characters )
     // Rule2- "^[A-Z]{1}[a-z]{8,}$"; (with one Upper Case)
     // Rule3- "^[A-Z]{1}[a-z]{8,}[0-9]{1}$"; ( Atleast one Numeric Number)
+    // Rule4- "^[A-Z]{1}[a-z]{8,}[0-9]{1}[- @ + *]{1}$"; (Atleat one Special Character.)
+
 
     //Methods
     public boolean validFirstName(String name) {

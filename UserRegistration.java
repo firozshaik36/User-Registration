@@ -97,6 +97,7 @@ class Student{
             logger.info("I.Minimum Eight Characters.");
             logger.info("II.Atleast one Upper Case.");
             logger.info("III.Atleast one Numeric Number.");
+            logger.info("IV.Atleast one Special Character.");
         }
     }
 }
