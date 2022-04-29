@@ -91,7 +91,7 @@ class Student{
             this.passWord = passWord;
             logger.info("Valid");
         }else
-            logger.info("Password Should Be Minimum Eight Characters.");
+            logger.info("Password Should Be Minimum Eight Characters and have Atleast one Upper Case.");
     }
 }
 
