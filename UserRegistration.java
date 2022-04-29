@@ -115,15 +115,16 @@ public class UserRegistration {
 
         // Taking Input From User
         Student student = new Student();
-        System.out.println("Enter Your First Name:");
-        student.setFirstName(sc.nextLine());
-        System.out.println("Enter Your Last Name:");
-        student.setLastName(sc.nextLine());
+
+       // System.out.println("Enter Your First Name:");
+       // student.setFirstName(sc.nextLine());
+       // System.out.println("Enter Your Last Name:");
+       // student.setLastName(sc.nextLine());
         System.out.println("Enter Your Email");
         student.setEmail(sc.nextLine());
-        System.out.println("Enter Your Mobile Number");
-        student.setMobileNumber(sc.nextLine());
-        System.out.println("Enter Your Password");
-        student.setPassWord(sc.nextLine());
+        //System.out.println("Enter Your Mobile Number");
+        //student.setMobileNumber(sc.nextLine());
+        //System.out.println("Enter Your Password");
+        //student.setPassWord(sc.nextLine());
     }
 }

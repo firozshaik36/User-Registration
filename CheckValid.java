@@ -10,6 +10,7 @@ public class CheckValid {
     public static final String NUMBER_PATTERN = "^[0-9]{2}[\\s][0-9][0-9]{9}$"; //Number Pattern
     public static final String PASSWORD_PATTERN = "^[A-Z]{1}[a-z]{8,}[0-9]{1}[- @ + *]{1}$";//PassWord Pattern
 
+
     // Password Rules
     // Rule1- "^[a-z]{8,}$" ( Min 8 Characters )
     // Rule2- "^[A-Z]{1}[a-z]{8,}$"; (with one Upper Case)
