@@ -6,7 +6,8 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
- * User Need To Enter Valid First Name , Last Name , Email and Mobile NUmber For User Registration
+ * User Need To Enter Valid First Name , Last Name , Email , Mobile NUmber and
+ * PassWord For User Registration.
  *
  * @author firoz
  *
@@ -23,6 +24,7 @@ class Student{
     private String lastName;
     private String email;
     private String mobileNumber;
+    private String passWord;
 
     //Created object for checkValid Class
     static  CheckValid checkValid = new CheckValid();
@@ -83,6 +85,14 @@ class Student{
         }else
             logger.info("Entered Mobile Number is an InValid");
     }
+
+    public void setPassWord(String passWord) {
+        if(checkValid.validpassWord(passWord)) {
+            this.passWord = passWord;
+            logger.info("Valid");
+        }else
+            logger.info("Password Should Be Minimum Eight Characters.");
+    }
 }
 
 public class UserRegistration {
@@ -96,15 +106,17 @@ public class UserRegistration {
         System.out.println("Welcome To User Registration.");
         System.out.println();
 
-        // Taking Input From User for FirstName and LastName
+        // Taking Input From User
         Student student = new Student();
         System.out.println("Enter Your First Name:");
-        student.setFirstName(sc.next());
+        student.setFirstName(sc.nextLine());
         System.out.println("Enter Your Last Name:");
-        student.setLastName(sc.next());
+        student.setLastName(sc.nextLine());
         System.out.println("Enter Your Email");
-        student.setEmail(sc.next());
+        student.setEmail(sc.nextLine());
         System.out.println("Enter Your Mobile Number");
         student.setMobileNumber(sc.nextLine());
+        System.out.println("Enter Your Password");
+        student.setPassWord(sc.nextLine());
     }
 }
