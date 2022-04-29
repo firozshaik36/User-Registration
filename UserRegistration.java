@@ -84,14 +84,20 @@ class Student{
             logger.info("Valid");
         }else
             logger.info("Entered Mobile Number is an InValid");
+            System.out.println();
     }
 
     public void setPassWord(String passWord) {
+        //if Condition for Checking Enterd MobileNumber is Valid or Not
         if(checkValid.validpassWord(passWord)) {
             this.passWord = passWord;
             logger.info("Valid");
-        }else
-            logger.info("Password Should Be Minimum Eight Characters and have Atleast one Upper Case.");
+        }else {
+            logger.info("Password Should Be:");
+            logger.info("I.Minimum Eight Characters.");
+            logger.info("II.Atleast one Upper Case.");
+            logger.info("III.Atleast one Numeric Number.");
+        }
     }
 }
 
