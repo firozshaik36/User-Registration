@@ -1,5 +1,6 @@
 package com.bridgelabz.userregistrationjunit;
 
+
 public class UserValidationException extends RuntimeException{
 
     enum ExceptionType {

@@ -1,5 +1,6 @@
 package com.bridgelabz.userregistrationjunit;
 
+
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Assert;
@@ -28,7 +29,7 @@ public class UserRegistrationParameterizedTest {
 
     @Test
     public void givenEmailAddress_ShouldReturnAsExpected(){
-        boolean testResult = userValidator.validateEmail(testEmail);
+        boolean testResult = userValidator.validateEmail.validate(testEmail);
         Assert.assertEquals(testResult, expectedResult);
     }
 
